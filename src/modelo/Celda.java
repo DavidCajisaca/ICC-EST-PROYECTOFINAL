@@ -14,7 +14,6 @@ public class Celda {
     public int getY() { return y; }
     public boolean esTransitable() { return transitable; }
     
-    // ✅ Agregamos este método para evitar el error
     public void setTransitable(boolean transitable) {
         this.transitable = transitable;
     }

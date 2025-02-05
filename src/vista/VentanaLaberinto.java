@@ -7,7 +7,7 @@ public class VentanaLaberinto extends JFrame {
     private JPanel panelLaberinto;
     private JButton[][] botones;
     private JButton btnBFS, btnDFS, btnNormal, btnCache, btnReset;
-    private int filas = 6, columnas = 6; // Tamaño por defecto
+    private int filas = 6, columnas = 6; 
 
     public VentanaLaberinto() {
         setTitle("Maze Solver");
@@ -15,14 +15,12 @@ public class VentanaLaberinto extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Panel de la rejilla
         panelLaberinto = new JPanel();
         panelLaberinto.setLayout(new GridLayout(filas, columnas));
         botones = new JButton[filas][columnas];
         inicializarBotones();
         add(panelLaberinto, BorderLayout.CENTER);
 
-        // Panel de controles
         JPanel panelControles = new JPanel();
         panelControles.setLayout(new FlowLayout());
 
@@ -50,12 +48,11 @@ public class VentanaLaberinto extends JFrame {
                 botones[i][j].setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 int x = i, y = j;
 
-                // Acción para alternar entre transitables y bloqueadas
                 botones[i][j].addActionListener(e -> {
                     if (botones[x][y].getBackground() == Color.WHITE) {
-                        botones[x][y].setBackground(Color.BLACK); // Bloqueada
+                        botones[x][y].setBackground(Color.BLACK); 
                     } else {
-                        botones[x][y].setBackground(Color.WHITE); // Transitable
+                        botones[x][y].setBackground(Color.WHITE); 
                     }
                 });
 

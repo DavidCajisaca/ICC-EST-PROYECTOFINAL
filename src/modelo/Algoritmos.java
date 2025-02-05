@@ -9,7 +9,6 @@ public class Algoritmos {
         this.laberinto = laberinto;
     }
 
-    // Algoritmo BFS (búsqueda en anchura)
     public List<Celda> bfs(Celda inicio, Celda destino) {
         Queue<List<Celda>> cola = new LinkedList<>();
         Set<String> visitados = new HashSet<>();
@@ -24,7 +23,7 @@ public class Algoritmos {
             Celda actual = camino.get(camino.size() - 1);
 
             if (actual.equals(destino)) {
-                return camino; // Se encontró la ruta
+                return camino; 
             }
 
             for (Celda vecino : obtenerVecinos(actual)) {
@@ -37,10 +36,9 @@ public class Algoritmos {
                 }
             }
         }
-        return new ArrayList<>(); // No se encontró camino
+        return new ArrayList<>(); 
     }
 
-    // Algoritmo DFS (búsqueda en profundidad)
     public List<Celda> dfs(Celda inicio, Celda destino) {
         Stack<List<Celda>> pila = new Stack<>();
         Set<String> visitados = new HashSet<>();
@@ -55,7 +53,7 @@ public class Algoritmos {
             Celda actual = camino.get(camino.size() - 1);
 
             if (actual.equals(destino)) {
-                return camino; // Se encontró la ruta
+                return camino;
             }
 
             for (Celda vecino : obtenerVecinos(actual)) {
@@ -68,10 +66,9 @@ public class Algoritmos {
                 }
             }
         }
-        return new ArrayList<>(); // No se encontró camino
+        return new ArrayList<>(); 
     }
 
-    // Algoritmo BFS con cache (memorización)
     public List<Celda> bfsConCache(Celda inicio, Celda destino) {
         Map<String, List<Celda>> cache = new HashMap<>();
         return bfsConCacheHelper(inicio, destino, cache);
@@ -88,13 +85,11 @@ public class Algoritmos {
         return resultado;
     }
 
-    // Método para obtener los vecinos transitables
     private List<Celda> obtenerVecinos(Celda actual) {
         List<Celda> vecinos = new ArrayList<>();
         int x = actual.getX();
         int y = actual.getY();
 
-        // Verificar los límites del laberinto y que sean transitables
         if (x > 0 && laberinto.getCelda(x - 1, y).esTransitable()) 
             vecinos.add(laberinto.getCelda(x - 1, y)); // Arriba
         if (x < laberinto.getFilas() - 1 && laberinto.getCelda(x + 1, y).esTransitable()) 
