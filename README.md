@@ -33,7 +33,8 @@ Se ha desarrollado una aplicación en Java con una interfaz gráfica que permite
 3.	Capturas de la implementación final de la UI
 ![image](https://github.com/user-attachments/assets/ec322a3a-91b6-4863-b8ae-029dce379d55)
 
-![image](https://github.com/user-attachments/assets/0706a7d8-4ab5-4593-9e78-011d498b7f02)
+![image](https://github.com/user-attachments/assets/46206ed8-1003-4a30-95d2-9583290702f9)
+![image](https://github.com/user-attachments/assets/8998fd9e-54fe-4dfc-bad0-475dd9ae576a)
 
 
 4.	Conclusiones 
